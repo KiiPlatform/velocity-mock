@@ -1,0 +1,36 @@
+{
+  "name": "velocity-mock",
+  "version": "0.0.1",
+  "description": "Mock for velocity",
+  "main": "dist/index.js",
+  "bin": {
+    "wattering-mock": "dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "typings.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint \"src/**/*.ts\"",
+    "build": "npm install && typings install && npm run build-ts",
+    "build-ts": "rm -rf dist && tsc",
+    "dummy1": "node dist/index.js --username testuser --password password --thing-id th.3c794b2c5ea0-d4f8-6e11-d5cd-0cd50aab --interval 1000"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.29",
+    "tslint": "^3.13.0",
+    "tslint-config-standard": "^1.5.0",
+    "typescript": "^2.0.3",
+    "typings": "^1.0.4"
+  },
+  "dependencies": {
+    "command-line-args": "^3.0.1",
+    "command-line-usage": "^3.0.5",
+    "csvjson": "^4.3.3",
+    "kii-cloud-sdk": "^2.4.8",
+    "tsconfig": "^5.0.3"
+  },
+  "author": "Kii Corp",
+  "license": ""
+}
