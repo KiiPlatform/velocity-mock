@@ -103,11 +103,12 @@ let user:any;
             }
         ).then(
             (bucket: any) => {
-                console.log('Sending vehicle speed:' + record.CURRENT_SPEED );
+                console.log('Sending vehicle speed:' + record.speed );
                 var obj = bucket.createObject();
                 obj.set("UserID", user.getID());
                 obj.set("ThingID", thingID);
-                obj.set("velocity",record.vol);
+                obj.set("velocity",parseInt(record.speed));
+                obj.set("unit","mph");
                 return obj.save()
             }
         ).then(
